@@ -2,21 +2,33 @@
 
 var over = () => {
     // Añadir una clase sobre logo estilo: background-color: darkred;
-    
+    const findLogo$$ = document.querySelector(".logo");
+    findLogo$$.setAttribute("style","background-color: darkred");
   };
   // Ejercicio 1 -> out
+  console.log("Ejercicio # 1 - Cambiando el color del fondo a darkred", over);
   
   var out = () => {
     // Eliminar la clase añadida sobre logo estilo: background-color: darkred;
+    const findLogo$$0 = document.querySelector(".logo");
+    findLogo$$0.classList.remove("logo");
   };
+
+  console.log("Ejercicio # 2 - Eliminando la clase del logo", out);
   
   // Ejercicio 3 -> onkeyup
   
   var toUpperInput = () => {
     // Transforma el input a mayusculas
+    const text = findInput$$.value;
+    const textUp = text.toUpperCase();
+    findInput$$.value = textUp;
+    console.log(textUp);
   };
-  
-  
+
+  const findInput$$ = document.querySelector("#input-finder");
+  findInput$$.addEventListener("onkeyup",toUpperInput);
+    
   // Ejercicio 4 -> OnClick
   
   // Listado de personajes
